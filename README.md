@@ -1,4 +1,12 @@
 # PBO_MVC
+### DATA DIRI
+- NAMA      : Armaningtyas Utami
+- KELAS     : XI RPL 1
+- NO. URUT  : 05
+- NIS       : 4672/1391.070
+- NAMA SEKOLAH  : SMK TELKOM MALANG
+<br>
+
 ### SCREENSHOT PROJECT
 ![1.png](https://s27.postimg.org/o4djzi0o3/image.png)
 ![2.png](https://s29.postimg.org/sm7rv97yf/image.png)
@@ -11,11 +19,3 @@
 ![9.png](https://s2.postimg.org/7ciqgku5l/image.png)
 ![10.png](https://s2.postimg.org/bz3p2yt3d/image.png)
 ![11.png](https://s27.postimg.org/xtyourf4j/image.png)
-<br>
-
-### DATA DIRI
-- NAMA      : Armaningtyas Utami
-- KELAS     : XI RPL 1
-- NO. URUT  : 05
-- NIS       : 4672/1391.070
-- NAMA SEKOLAH  : SMK TELKOM MALANG
