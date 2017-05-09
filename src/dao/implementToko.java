@@ -12,10 +12,13 @@ import model.m_toko;
  *
  * @author Moklet
  */
-public class implementToko {
+public interface implementToko {
 
-    public List<m_toko> getAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public void TampilData(m_toko a);  
+    public void UbahData(m_toko a); 
+    public void SimpanData(m_toko a);  
+    public void HapusData(String kode);
+    public List<m_toko> getCariKategori(String kategori);  
+    public List<m_toko> getAll(); 
     
 }

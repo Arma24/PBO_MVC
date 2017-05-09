@@ -20,6 +20,7 @@ import controller.login_koneksi;
  */
 public class login extends javax.swing.JFrame {
 
+    static String user;
     /**
      * Creates new form login
      */
@@ -54,6 +55,12 @@ public class login extends javax.swing.JFrame {
         jLabel1.setText("USERNAME");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(95, 11, 67, 17);
+
+        username.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameActionPerformed(evt);
+            }
+        });
         getContentPane().add(username);
         username.setBounds(33, 34, 191, 26);
 
@@ -125,7 +132,7 @@ public class login extends javax.swing.JFrame {
             ResultSet result =ps.executeQuery(); 
             if(result.next()){ 
                 new home().show(); 
-                String user = username.getText(); //perlu deklarasi user diclass utama. 
+                user = username.getText(); //perlu deklarasi user diclass utama. 
                 this.dispose(); 
             } 
             else{ 
@@ -144,19 +151,23 @@ public class login extends javax.swing.JFrame {
         String pw = password.getText();
 
         try {
-            try (Statement statement = (Statement) login_koneksi.GetConnection().createStatement()) {
-                statement.executeUpdate("INSERT into tb_akun(username, password) VALUES ('"+username+"','"+password+"');");
+            try (Statement statement = (Statement) login_koneksi.GetConnection().createStatement()){
+                statement.executeUpdate("INSERT INTO tb_akun(username,password) VALUES ('"+username+"','"+password+"');");
             }
-            JOptionPane.showMessageDialog(null, "Selamat! Anda Berhasil Sign Up!");
+            JOptionPane.showMessageDialog(null, "Selamat! anda berhasil Sign Up");
         }
-        catch (Exception t){
-            JOptionPane.showMessageDialog(null, "Mohon Maaf, ulangi lagi prosedur");
+        catch(Exception t){
+            JOptionPane.showMessageDialog(null,"Mohon maaf, ulangi lagi prosedur");
         }
     }//GEN-LAST:event_signupActionPerformed
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
-        this.dispose();
+        System.exit(0);
     }//GEN-LAST:event_exitActionPerformed
+
+    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usernameActionPerformed
 
     /**
      * @param args the command line arguments
